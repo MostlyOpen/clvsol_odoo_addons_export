@@ -325,14 +325,14 @@ class ModelExport_xls(models.Model):
 
         model_name = self.model_id.model.replace('.', '_')
         label = ''
-        if self.label is not False:
-            label = '_' + self.label
-        # label = self.label
+        # if self.label is not False:
+        #     label = '_' + self.label
+        label = self.label
         code = self.code
         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')[2:]
         file_name = self.export_file_name\
             .replace('<model>', model_name)\
-            .replace('_<label>', label)\
+            .replace('<label>', label)\
             .replace('<code>', code)\
             .replace('<timestamp>', timestamp)
         file_path = self.export_dir_path + '/' + file_name

@@ -101,7 +101,7 @@ class ModelExportCreateTemplate(models.TransientModel):
                 values = {
                     'sequence': model_export_field.sequence,
                     'name': model_export_field.name,
-                    'model_export_id': new_model_export.id,
+                    'model_export_template_id': new_model_export.id,
                     'model_export_display': model_export_field.model_export_display,
                     'field_id': model_export_field.field_id.id,
                 }
@@ -118,7 +118,7 @@ class ModelExportCreateTemplate(models.TransientModel):
                     values = {
                         'sequence': model_export_document_item.sequence,
                         'name': model_export_document_item.name,
-                        'model_export_id': new_model_export.id,
+                        'model_export_template_id': new_model_export.id,
                         'model_export_display': model_export_document_item.model_export_display,
                         'document_item_id': model_export_document_item.document_item_id.id,
                     }
@@ -136,7 +136,7 @@ class ModelExportCreateTemplate(models.TransientModel):
                     values = {
                         'sequence': model_export_lab_test_criterion.sequence,
                         'name': model_export_lab_test_criterion.name,
-                        'model_export_id': new_model_export.id,
+                        'model_export_template_id': new_model_export.id,
                         'model_export_display': model_export_lab_test_criterion.model_export_display,
                         'lab_test_criterion_id': model_export_lab_test_criterion.lab_test_criterion_id.id,
                     }
